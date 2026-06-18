@@ -1,2 +1,0 @@
-SICURA_AI
-Team=Mavrix
