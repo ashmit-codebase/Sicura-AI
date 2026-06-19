@@ -76,6 +76,7 @@ export default function AppLayout() {
     }
   }, [location]);
 
+  const isHomePage = location.pathname === ROUTES.home;
   return (
     <div className="app-container">
       <div className="background-effect" />
@@ -116,7 +117,7 @@ export default function AppLayout() {
       </aside>
 
       <main className="main-content" ref={mainContentRef}>
-        <header className={`top-header ${isSidebarOpen ? 'header-shifted' : ''}`}>
+        {isHomePage && <header className={`top-header ${isSidebarOpen ? 'header-shifted' : ''}`}>
           <NavLink to={ROUTES.home} className="header-logo">
             <SicuraLogo size={38} className="logo-icon" />
             <span className="logo-text">Sicura <span className="logo-ai">AI</span></span>
@@ -141,7 +142,7 @@ export default function AppLayout() {
             </button>
           </div>
         </header>
-
+        }
         <Outlet />
 
         <SiteFooter shifted={isSidebarOpen} />
