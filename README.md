@@ -19,11 +19,11 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 
-If failed error occured -:
-cd backed 
-pip install -r requirement.txt 
-python main.py
-type main.py
-python -m uvicorn main:app -reoload - port 8000
+If failed error occured -:<br>
+cd backed <br>
+pip install -r requirement.txt <br>
+python main.py <br>
+type main.py <br>
+python -m uvicorn main:app -reoload - port 8000<br>
 
 
